@@ -1,0 +1,459 @@
+<html>
+    <head>
+        <title>Travis Weston</title>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <style>
+            * {
+                font-family: 'Playfair Display', serif;
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            .hero {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, rgba(195, 7, 7, 0.3) 99.99%, rgba(255, 255, 255, 0) 100%), url('/images/computer.jpg');
+                background-color: #FFF;
+                background-blend-mode: luminosity, normal;
+                background-size: cover;
+            }
+
+            .hero > h1 {
+                font-size: 15vh;
+                color: #DEDEDC;
+                text-shadow: 4px 4px 4px rgba(195, 7, 7, 0.8);
+            }
+
+            .img-border {
+                border: 5px solid #D28F5B;
+                box-shadow: 6px 6px 4px rgba(222, 222, 220, 0.4);
+            }
+
+            h2 {
+                font-size: 6vh;
+            }
+
+            @media (orientation: landscape) and (max-height: 600px) {
+                h2 {
+                    font-size: 3em;
+                }
+            }
+
+            .dark {
+                background: #292935;
+                color: #DEDEDC;
+            }
+
+            .dark > h2 {
+                text-shadow: 3px 3px 4px rgba(210, 143, 91, 0.7);
+            }
+
+            .light {
+                background: #DEDEDC;
+                color: #292935;
+            }
+
+            .light > h2 {
+                text-shadow: 3px 3px 10px rgba(195, 7, 7, 0.45);
+            }
+
+            .headshot {
+                width: 40vh;
+                height: 40vh;
+            }
+
+            .projectPic {
+                width: 25vh;
+                height: 25vh;
+                max-height: 250px;
+                max-width: 250px;
+            }
+
+            @media (orientation: landscape) and (max-width: 1024px){
+                .projectPic {
+                    width: 50vh;
+                    height: 50vh;
+                }
+            }
+
+            @media (max-width: 699px) {
+                .timeline ul li h3, .timeline ul li h4,.timeline ul li h5,.timeline ul li h6 {
+                    color: rgba(210, 143, 91, 1);
+                }
+                .timeline ul li {
+                    padding: 15px;
+                }
+            }
+
+            .timeline ul li p {
+                width:100%;
+            }
+
+            @media (min-width: 1000px) {
+                .timeline ul li p {
+                    width:75%;
+                }
+            }
+
+            @media (min-width: 1300px) {
+                .timeline ul li p {
+                    width:50%;
+                }
+            }
+
+/** BEGIN TIMELINE **/
+            @media (min-width: 700px) {
+                .timeline {
+                    position: relative;
+                    width: 100%;
+                }
+
+                .timeline:before {
+                    content: '';
+                    position:absolute;
+                    left: 50%;
+                    width: 2px;
+                    height: 100%;
+                    background: #C30707;
+                }
+
+                .timeline ul {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .timeline ul li{
+                    list-style: none;
+                    position: relative;
+                    width: 50%;
+                    padding: 20px 40px;
+                    box-sizing: border-box;
+                    clear:both;
+                }
+                .timeline ul li:nth-child(odd){
+                    float: left;
+                    text-align: right;
+                }
+
+                .timeline ul li:nth-child(odd) p {
+                    float:right;
+                }
+
+                .timeline ul li:before {
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background: #C30707;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 3px rgba(210, 143, 91, 0.5);
+                }
+
+                .timeline ul li:nth-child(odd):before{
+                    top: 30px;
+                    right: -6px;
+                }
+
+                .timeline ul li:nth-child(even):before{
+                    top: 30px;
+                    left: -4px;
+                }
+
+                .timeline ul li:nth-child(even){
+                    float: right;
+                    text-align: left;
+                }
+
+                .timeline ul li h3, .timeline ul li h4,.timeline ul li h5,.timeline ul li h6 {
+                    color: rgba(210, 143, 91, 1);
+                }
+
+                .timeline ul li h3 {
+                    font-weight: 700;
+                }
+
+                .topBulb, .bottomBulb {
+                    height: 20px;
+                    width: 20px;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -9px;
+                    background: #C30707;
+                    border-radius: 50%;
+                }
+
+                .topBulb {
+                    top: -15px;
+                }
+
+                .bottomBulb {
+                    top: 100%;
+                    margin-top: -5px;
+                }
+            }
+/** END TIMELINE **/
+
+            @media (min-height: 600px){
+                .hero h1 {
+                    padding-top: 15%;
+                }
+                .hero div {
+                    padding-bottom: 15%;
+                }
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+
+            h5, h6 {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            h6 {
+                padding-top: 3px;
+                clear:both;
+            }
+            @media (min-height: 641px) {
+                h3 {
+                    font-size: 3vh;
+                }
+
+                h4 {
+                    font-size: 2.5vh;
+                    font-weight: 500;
+                }
+                h5, h6 {
+                    font-size: 2vh;
+                    font-weight: 400;
+                }
+            }
+
+            .dark div svg {
+                fill: #DEDEDC;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+    </head>
+    <body class="text-lg sm:text-base">
+        <div class="hero bg-cover flex flex-wrap md:h-screen min-h-screen">
+            <h1 class="w-full text-center">
+                 Hi, I'm Travis
+            </h1>
+            <div class="w-full flex justify-center text-sm md:text-base">
+                <img src="images/headshot.jpg" alt="Travis Weston Headshot" class="rounded-full img-border headshot" />
+            </div>
+        </div>
+        <div id="about" class="light p-10">
+            <h2 class="w-full text-center">About Me</h2>
+            <div class="md:pr-20 md:pl-20 lg:pr-40 lg:pl-40 text-xl">
+                <p class="mt-4 text-3xl font-semibold">
+                    Hi, I'm Travis.
+                </p>
+                <p class="mt-4">
+                    I've been programming computers for a long time. Since I was 5 years old, in fact. Of course, back then I wasn't versed in Object Oriented code, Object Calisthenics, Single Responsibility Principle, or how much caffeine is safe in a single day. (Spoiler: Less than I normally drink.)
+                </p>
+                <p class="mt-4">
+                    These days I'm making the world a better place by improving Maine's ability to access the news, while also focusing on finding ways to teach the next generation of software developers. Whether that's through private mentoring, or teaching kids how to code.
+                </p>
+                <p class="mt-4">
+                    I am a largely self-taught developer, and that tends to find me learning as many new technologies as I can get my hands &mdash; or brain &mdash; around. My work life has me focused on WordPress development, so in my spare time I try other things.
+                </p>
+                <p class="mt-4">
+                    What have I been up to lately? Not much, just learning how to write code for Laravel and Vue.js. I've also been trying to improve my website design skills by digging deep into Tailwind CSS and as many "Design for Developers" courses as I can find.
+                </p>
+                <p class="mt-4">
+                    This website design is my biggest unique design so far, and I think it came out nicely.
+                </p>
+            </div>
+        </div>
+        <div id="work" class="dark relative pb-10">
+            <h2 class="w-full text-center pb-5">Work Experience</h2>
+            <div class="timeline">
+                <ul>
+                    <li>
+                        <h3>Lead Software Developer</h3>
+                        <h4>June, 2019 - Present</h4>
+                        <h5>Bangor Daily News</h5>
+                        <p>Lead a small team of internal and contract developers to manage
+                            the Bangor Publishing Company network of websites and blogs.
+                            Handle ideation, development, and implementation of all new
+                            digital products. Locate bugs and security holes within website
+                            network and repair them. Handle development of new WordPress
+                            plugins and integrations.</p>
+                        <h6>Technologies: PHP, MySQL, JavaScript, WordPress, AWS</h6>
+                    </li>
+                    <li>
+                        <h3>IT Manager</h3>
+                        <h4>November, 2015 - Present</h4>
+                        <h5>Bangor Daily News</h5>
+                        <p>Supervise team of IT Support Specialists and third-party
+                            service providers. Budgeting for all technology expenses
+                            for Bangor Publishing Company imprints and offices. Oversee
+                            all internal coding projects. Oversee vendor relationships
+                            for technology such as phones, internet, etc. Coordinate
+                            contractors to handle wiring of offices. Training staff
+                            on new systems. Maintain VoIP phone system in-house.</p>
+                        <h6>Technologies: PHP, MySQL, JavaScript, WordPress, AWS, G Suite, Asterisk</h6>
+                    </li>
+                    <li>
+                        <h3>Digital Product Developer</h3>
+                        <h4>April, 2014 - November, 2015</h4>
+                        <h5>Bangor Daily News</h5>
+                        <p>In charge of development and infrastructure for the
+                            Bangor Publishing Company network of websites and blogs.
+                            Handle ideation, development, and implementation of new
+                            digital products. Locate bugs and security holes within
+                            website network and repair them. Handle development of
+                            new WordPress plugins as well as non-WordPress PHP projects.</p>
+                        <h6>Technologies: PHP, MySQL, JavaScript, WordPress, AWS, G Suite</h6>
+                    </li>
+                    <li>
+                        <h3>Technical SEO Consultant</h3>
+                        <h4>July, 2012 - August, 2013</h4>
+                        <h5>Freelance</h5>
+                        <p>Focused mainly on local small business. Met with potential
+                            clients, discussed content. Explained how Google ranks websites.
+                            Analyzed websites for SEO failings. When needed, redesigned
+                            and transitioned entire websites to new frameworks.</p>
+                        <h6>Technologies: PHP, MySQL, JavaScript, WordPress</h6>
+                    </li>
+                    <li>
+                        <h3>PHP Developer</h3>
+                        <h4>April, 2009 - May, 2012</h4>
+                        <h5>Crooked Studios, LLC.</h5>
+                        <p>Handled bug reports and code updates. Worked with players to
+                            learn more about what they were interested in. Maintained
+                            legacy codebase, implementing bug fixes and code changes.
+                            Maintained legacy SQL server. Lead team of continuously
+                            changing volunteer developers.</p>
+                        <h6>Technologies: PHP, MySQL, JavaScript</h6>
+                    </li>
+                </ul>
+                <div class="topBulb"></div>
+                <div class="bottomBulb"></div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <div id="projects" class="p-10 light">
+            <h2 class="w-full text-center">Projects</h2>
+            <div class="md:pr-20 md:pl-20 lg:pr-40 lg:pl-40 text-xl">
+                <p class="mt-4">
+                    Have you ever woken up one day and realized you've spent the last 6 years
+                    doing code every day, and you're not able to show anybody any of it because
+                    that code is owned by the company you work for?
+                </p>
+                <p class="mt-4">
+                    No?
+                </p>
+                <p class="mt-4">
+                    Just me?
+                </p>
+                <p class="mt-4">
+                    Oh well, when I realized that I knew I needed to do something about it.
+                    I love code, but I also love the problems we're solving in the news.
+                    That lead me to not doing a lot of non-work code.
+                </p>
+                <p class="mt-4">
+                    Not anymore. As I explain to the people I teach, you can read all you want
+                    but you don't really learn anything about code until you start writing it.
+                    So I started writing it.
+                </p>
+                <p class="mt-4">
+                    Below you will find a list of the various projects that I have developed, with
+                    a short description of what technologies were involved, and any interesting challenges
+                    that I came across while finishing that project.
+                </p>
+                <p class="mt-4">
+                    Each of these projects is hosted on Github, and if you're interested in helping to expand
+                    them, please don't hesitate to put in a pull request, or an issue.
+                </p>
+            </div>
+        </div>
+        <div class="p-10 dark">
+            <h2 class="w-full text-center pt-10 lg:pt-0">2048</h2>
+            <div class="flex flex-wrap items-center">
+                <div class="w-full p-10 lg:p-0 lg:w-1/4">
+                    <img src="images/2048.gif" alt="2048 gif" class="rounded-full object-cover projectPic img-border m-auto">
+                </div>
+                <div class="w-full lg:w-3/4 lg:pl-5 lg:pr-5 md:text-xl text-justify">
+                    <p class="pt-2">
+                        I absolutely love logic puzzles, so it was without hesitation that I tackled
+                        rewriting <a href="http://gabrielecirulli.com/" rel="nofollow" alt="Gabrielle Cirulli's website">Gabriele Cirulli's</a>
+                        2048 with Vue.js. This project didn't go off without a hitch, though.
+                        It was my first major Vue project, and I had to learn a lot about how
+                        the reactive components worked together.
+                    </p>
+                    <p class="pt-2">
+                        Building the board itself was simple enough using Flexbox. The trouble
+                        started with how I originally planned to handle adding tiles to the board.
+                        As tiles were merged, I was increasing the value of one tile, and destroying
+                        the other tile. But because of how Vue treats array based reactive components,
+                        things started to jump around the board with the CSS animations.
+                    </p>
+                    <p class="pt-2">
+                        I ended up solving this problem by maintaining an array of all tiles to ever
+                        be added to the board, and flipping a "visible" flag on them as they were merged.
+                        This allowed me to hide them from the board, without disrupting the index.
+                    </p>
+                    <p class="pt-2">
+                        Note about the design: I did a near exact clone of the design to start, as I wanted
+                        my focus to be solely on the mechanics of the game. I have plans to go back and customize
+                        the design down the road.
+                    </p>
+                </div>
+            </div>
+            <a href="https://anubisthejackle.github.com/2048-vue/" alt="2048 Vue Github Pages" rel="nofollow" target="_blank">
+                <div class="flex items-center justify-center pt-5">
+                    <svg class="w-20 h-20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <defs/>
+                      <path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0012 .3"/>
+                    </svg>
+                    <div class="ml-5 text-3xl font-semibold">
+                        View on Github Pages
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="p-10 light">
+            <h2 class="w-full text-center pt-10 lg:pt-0">Pomodoro</h2>
+            <div class="flex flex-col-reverse flex-wrap lg:flex-row items-center">
+                <div class="w-full lg:w-3/4 lg:pl-5 lg:pr-5 md:text-xl text-justify">
+                    <p class="pt-2">
+                        I built this Pomodoro / To-Do list app for two reasons: First, it was a good way to learn Vue.js and design, and second, I actually use it.
+                    </p>
+                    <p class="pt-2">
+                        I was looking for a pomodoro clock that I could put my to-do list into, and I kept finding ones full of ads, or that didn't work for me for one reason or another. So I decided that I would make this one of my portfolio projects and release it on Github.
+                    </p>
+                    <p class="pt-2">
+                        The design was completed using Figma. I designed it for mobile. I didn't want to build a desktop design because I feel the simplicity of the Pomodoro technique should be reflected in the design itself. For that reason there isn't a whole lot going on with the design.
+                    </p>
+                    <p class="pt-2">
+                        It uses Vue.js to handle the responsive elements, and local storage to maintain state between refreshes. Future versions may include a Todoist integration, but for now I like the simple version.
+                    </p>
+                </div>
+                <div class="w-full p-10 lg:p-0 lg:w-1/4">
+                    <img src="images/pomodoro.png" alt="Pomodoro Screen grab" class="rounded-full object-cover projectPic img-border m-auto">
+                </div>
+            </div>
+            <a href="https://anubisthejackle.github.com/pomodoro-todo/" alt="Pomodoro To-Do Github Pages" rel="nofollow" target="_blank">
+                <div class="flex items-center justify-center pt-5">
+                    <svg class="w-20 h-20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <defs/>
+                        <path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0012 .3"/>
+                    </svg>
+                    <div class="ml-5 text-3xl font-semibold">
+                        View on Github Pages
+                    </div>
+                </div>
+            </a>
+        </div>
+    </body>
+</html>
